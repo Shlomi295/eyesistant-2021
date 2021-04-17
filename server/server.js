@@ -21,6 +21,8 @@ app.all('', (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../server')));
+
 
 // start node server
 const port = process.env.PORT || 3000;

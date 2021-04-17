@@ -4,6 +4,7 @@
    <title>Eyesistant</title>
    <link rel="stylesheet" type="text/css" href="style.css">
    <script src="script.js"></script>
+   <script src="/server//controllers/function-controller.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -31,7 +32,11 @@
       </div>
     </div>
     <div class="file-upload-content">
-            <button type="button" class="remove-image">Analyze</button>
+            <button id="buttonSubmit" onclick="callEndpoint()" type="button" class="remove-image">Analyze</button>
+    </div>
+    <div id="list-classes">
+        <ul id="list"></ul>
+        <code id="output"></code>
     </div>
 </main>
 </body>

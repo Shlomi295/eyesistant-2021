@@ -114,3 +114,15 @@ body {
     border: 0;
     transition: all .2s ease;
   }
+
+  code{
+      font-size: 30px;
+  }
+
+#list-classes{
+    text-align: center; 
+}
+ul {
+    display: table;
+    margin: 0 auto;
+  }
