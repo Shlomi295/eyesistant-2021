@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <title>Eyesistant</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
-   <script src="script.js"></script>
-   <script src="/server//controllers/function-controller.js"></script>
+    <title>Eyesistant</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-<header id="flex-header">
-    <div class="cloud-header"></div>
+    <header id="flex-header">
+        <div class="cloud-header"></div>
 
-</header>
-<main>
+    </header>
+    <main>
 
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <div class="file-upload">
-      <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-    
-      <div class="image-upload-wrap">
-        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-        <div class="drag-text">
-          <h3>Drag and drop a file or select add Image</h3>
+        <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <div class="file-upload">
+            <button class="file-upload-btn btn btn-primary btn-lg btn-block" type="button btn"
+                onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+
+            <div class="image-upload-wrap">
+                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                <div class="drag-text">
+                    <h3>Drag and drop a file or select add Image</h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" />
+                <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="btn btn-danger btn-lg btn-block">Remove <span
+                            class="image-title">Uploaded Image</span></button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="file-upload-content">
-        <img class="file-upload-image" src="#" alt="your image" />
-        <div class="image-title-wrap">
-          <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+        <div class="file-upload-content">
+            <div class="file-analyze">
+                <button id="buttonSubmit" onclick="callEndpoint()" type="button"
+                    class="btn btn-success btn-lg btn-block">Analyze</button>
+
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="file-upload-content">
-            <button id="buttonSubmit" onclick="callEndpoint()" type="button" class="remove-image">Analyze</button>
-    </div>
-    <div id="list-classes">
-        <ul id="list"></ul>
-        <code id="output"></code>
-    </div>
-</main>
+        <div id="list-classes">
+            <ul id="list"></ul>
+
+        </div>
+    </main>
 </body>
+
 </html>

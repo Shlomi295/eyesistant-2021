@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 function readURL(input) {
   if (input.files && input.files[0]) {
 
@@ -20,24 +21,28 @@ function readURL(input) {
 }
 
 function removeUpload() {
-  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-  $('.file-upload-content').hide();
-  $('.image-upload-wrap').show();
+  //   $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  //   $('.file-upload-content').hide();
+  //   $('.image-upload-wrap').show();
+  // }
+  // $('.image-upload-wrap').bind('dragover', function() {
+  //   $('.image-upload-wrap').addClass('image-dropping');
+  // });
+  // $('.image-upload-wrap').bind('dragleave', function() {
+  //   $('.image-upload-wrap').removeClass('image-dropping');
+  refreshPage();
 }
-$('.image-upload-wrap').bind('dragover', function() {
-  $('.image-upload-wrap').addClass('image-dropping');
-});
-$('.image-upload-wrap').bind('dragleave', function() {
-  $('.image-upload-wrap').removeClass('image-dropping');
-});
+
+function refreshPage() {
+  window.location.reload();
+}
 
 function callEndpoint() {
   let button = document.getElementById('buttonSubmit');
   button.addEventListener('click', buttonSubmitHandler);
-
 }
 
-function buttonSubmitHandler(){
+function buttonSubmitHandler() {
   let url = 'https://acd66e43.us-south.apigw.appdomain.cloud/api';
   let apiKey = 'f806b1b3-d3d0-4e0e-830a-8b63481fe91e';
   const xhr = new XMLHttpRequest();
@@ -54,7 +59,7 @@ function buttonSubmitHandler(){
         var objectClass = myArray[0].classes[key].class;
         var score = myArray[0].classes[key].score;
         str +=
-        `<li><code>${objectClass} : ${score}<code></li>`;
+                    `<li><code>${objectClass} : ${score}<code></li>`;
       }
       let output = document.getElementById('list');
 
