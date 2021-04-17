@@ -11,7 +11,6 @@ const app = express();
 // enable parsing of http request body
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 // routes and api calls
 app.use('/health', healthRoutes);
 app.use('/swagger', swaggerRoutes);
@@ -20,6 +19,8 @@ app.use('/swagger', swaggerRoutes);
 app.all('', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../public', 'index.html'));
 });
+
+app.use(express.static(path.join(__dirname, '../public')));
 
 // start node server
 const port = process.env.PORT || 3000;
