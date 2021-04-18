@@ -55,11 +55,12 @@ function buttonSubmitHandler() {
     if (this.status === 200) {
       let object = JSON.parse(this.responseText);
       myArray = Object.values(object);
+
       for (key in myArray[0].classes) {
         var objectClass = myArray[0].classes[key].class;
         var score = myArray[0].classes[key].score;
         str +=
-                    `<li><code>${objectClass} : ${score}<code></li>`;
+         `<li>${objectClass} : ${score}</li>`;
       }
       let output = document.getElementById('list');
 

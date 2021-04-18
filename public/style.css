@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Zen+Dots&display=swap');
+
 body {
     font-family: sans-serif;
-    background-color: #eeeeee;
+    background-image: url("https://i.pinimg.com/originals/98/ff/46/98ff4692183c4d959d0a2e9dd5af8189.jpg") ;
+    background-color: #2b2b2b !important;
   }
   
   .file-upload {
@@ -134,4 +138,26 @@ ul {
     display: table;
     margin: 0 auto;
     list-style-type: none;
+    color: white;
   }
+
+  .jumbotron {
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
+  }
+
+  .display-header{
+    font-family: 'Zen Dots', cursive;
+    font-size: 60px;
+  }
+
+  small, small {
+    font-size: 42% !important;
+    font-weight: 400;
+  }
+
+
