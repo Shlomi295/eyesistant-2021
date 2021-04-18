@@ -8,8 +8,8 @@ body {
   }
   
   .file-upload {
-    background-color: #ffffff;
-    width: 600px;
+    background-image: url("https://i.pinimg.com/originals/98/ff/46/98ff4692183c4d959d0a2e9dd5af8189.jpg") ;
+    width: 950px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -59,14 +59,15 @@ body {
   
   .image-upload-wrap {
     margin-top: 20px;
-    border: 4px dashed #1FB264;
+    border: 4px dashed #1ef388;;
     position: relative;
   }
   
   .image-dropping,
   .image-upload-wrap:hover {
-    background-color: #1FB264;
+    background-color:  #1ef388;
     border: 4px dashed #ffffff;
+    color:black;
   }
   
   .image-title-wrap {
@@ -81,8 +82,11 @@ body {
   .drag-text h3 {
     font-weight: 100;
     text-transform: uppercase;
-    color: #15824B;
+    color: #1ef388;
     padding: 60px 0;
+  }
+  .drag-text h3:hover{
+    color:black;
   }
   
   .file-upload-image {

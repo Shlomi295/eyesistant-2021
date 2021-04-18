@@ -28,7 +28,6 @@ app.use(express.static(path.join(__dirname, '../server')));
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App UI available http://localhost:${port}`);
-  console.log(`Swagger UI available http://localhost:${port}/swagger/api-docs`);
 });
 
 // error handler for unmatched routes or api calls
