@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
 var watson = require('watson-developer-cloud');
@@ -30,27 +32,26 @@ let parameters =
           threshold: 0.49,
         };
 
-function analyzeImage( function(req, res, err){
-    let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('profile_pic');
+function analyzeImage(req, res, err){
+  let upload = multer({ storage: storage, fileFilter: helpers.imageFilter }).single('profile_pic');
 
-    var params =
+  var params =
           {
             images_file: req.file,
             parameters: parameters,
           };
-  
-    // Call the classifier.
-    visual_recognition.classify(params, function(error, response) {
+
+  // Call the classifier.
+  visual_recognition.classify(params, function(error, response) {
     // If there's no error, then Watson's response is...
-      if (!error) {
-        var stringresponse = JSON.stringify(response, null, 2);
-        console.log(stringresponse);
-      } else {
-        console.log('Error: ' + error);
-      }
-    });
+    if (!error) {
+      var stringresponse = JSON.stringify(response, null, 2);
+      console.log(stringresponse);
+    } else {
+      console.log('Error: ' + error);
+    }
+  });
 
-}){
-
-   
 }
+
+

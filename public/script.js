@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 function readURL(input) {
   if (input.files && input.files[0]) {
