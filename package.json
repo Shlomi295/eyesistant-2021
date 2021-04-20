@@ -39,6 +39,7 @@
     "express": "^4.17.1",
     "ibm-cloud-env": "^0.2.7",
     "ibm-watson": "^6.0.4",
+    "multer": "^1.4.2",
     "swagger-ui-express": "^4.1.6",
     "watson-developer-cloud": "^4.0.1"
   },
